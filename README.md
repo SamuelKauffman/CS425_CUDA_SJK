@@ -1,6 +1,6 @@
 # CS425_CUDA_SJK
 
-# Matrix multiply
+# Matrix Vector Multiply
 
 ## Description
 
