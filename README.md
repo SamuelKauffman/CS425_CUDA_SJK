@@ -34,7 +34,7 @@ This program calculates the matrix-vector product `R = M × V` using CUDA.
 - `V` is a 10-element vector `[1, 2, ..., 10]`.
 - Each element of result vector `R` is the dot product of a row in `M` and vector `V`.
 
-## Kernel Launch Configuration
+## Threads
 
 - **Grid**: 10 blocks. 1 per matrix row
 - **Block**: 10 threads 1 per matrix column
