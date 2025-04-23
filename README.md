@@ -36,18 +36,8 @@ This program calculates the matrix-vector product `R = M × V` using CUDA.
 
 ## Kernel Launch Configuration
 
-- **Grid**: 10 blocks (1 per matrix row).
-- **Block**: 10 threads (1 per matrix column).
+- **Grid**: 10 blocks. 1 per matrix row
+- **Block**: 10 threads 1 per matrix column
 
-Each block computes one dot product. Threads multiply one element from the matrix row with the corresponding vector element and use **parallel reduction** in shared memory to sum the products.
-
-## Parallel Reduction Strategy
-
-1. Each thread computes `M[i][j] * V[j]` and stores in shared memory.
-2. Threads cooperate to sum the values using a binary tree-style reduction.
-3. Thread 0 in each block writes the result to `R[i]`.
-
-## Expected Output
-
-- Since every row of `M` is `[1,2,...,10]` and `V = [1,2,...,10]`, each `R[i]` is:
+Each block computes one dot product. Threads multiply one element from the matrix row with a vector element.
 
