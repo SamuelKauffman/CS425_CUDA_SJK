@@ -9,10 +9,10 @@ This program multiplies each element of a 10×10 matrix `M` with the correspondi
 ## Grid and Block Dimensions
 
 **Each thread handles one matrix element.**
-- **Block** size: 10×10
+- `Block size: 10×10`
 
 **100 threads are needed in total.**
-- **Grid** size: 1×1
+- `Grid size: 1×1`
 
 This makes it so that all 100 elements in a 10x10 matrix are covered by the thread block.
 
