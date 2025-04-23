@@ -1,6 +1,6 @@
 # CS425_CUDA_SJK
 
-# Matrix Vector Multiply
+# Assignment 1: Matrix Vector Multiply
 
 ## Description
 
@@ -24,7 +24,7 @@ int row = blockIdx.y * blockDim.y + threadIdx.y;
 int col = blockIdx.x * blockDim.x + threadIdx.x;
 ```
 
-# Matrix Vector Dot Product Multiplication
+# Assignment 2: Matrix Vector Dot Product Multiplication
 
 ## Description
 
